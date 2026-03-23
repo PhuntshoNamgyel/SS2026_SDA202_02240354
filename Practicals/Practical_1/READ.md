@@ -76,7 +76,7 @@ Two approaches are discussed:
 
 Approach 1: Hash and Collision Resolution
 
-This uses known hash functions like CRC32, MD5 or SHA-1 on the long URL and takes the first 7 characters of the result. The problem is that sometimes two different long URLs can produce the same 7 characters, which is called a collision. To fix this, the system adds extra characters to the original URL and tries again until it finds a unique result. The chapter also mentions using something called a Bloom filter to make this process faster, though it does not explain what a Bloom filter is in detail.
+This uses known hash functions like CRC32, MD5 or SHA-1 on the long URL and takes the first 7 characters of the result. The problem is that sometimes two different long URLs can produce the same 7 characters, which is called a collision. To fix this, the system adds extra characters to the original URL and tries again until it finds a unique result. To avoid querying the database on every attempt, the chapter recommends using a Bloom filter. A Bloom filter is a space efficient data structure that can quickly check whether a short URL already exists. Instead of hitting the database each time, it tells the system whether something definitely does not exist, which reduces unnecessary database calls and makes the collision resolution process faster.
 
 ![Hash and collision resolution flowchart](./images/3.png)
 
@@ -90,7 +90,7 @@ Instead of hashing, this approach takes the auto-incremented ID from the databas
 
 ![Base 62 conversion](./images/4.png)
 
-Strengths: since every database ID is unique, there are no collisions at all.
+Strengths: since every database ID is unique, there are no collisions at all. This also means a Bloom filter is not needed here since duplicate IDs simply cannot occur.
 
 Weaknesses: the length of the short URL grows as IDs get larger, and because IDs go up by one each time, the next available short URL is easy to predict which could be a security concern.
 
@@ -133,15 +133,15 @@ The base 62 conversion example with 11157 turning into 2TX was easy to follow an
 
 ### What Confused Me
 
-The chapter mentions a Bloom filter as a way to speed up collision checking but does not explain what it is. It just says to refer to an external reference. I looked it up briefly and from what I can tell it is a data structure that can quickly check if something probably does not exist without searching through everything, but I am not fully confident in my understanding of it.
+The chapter introduces Bloom filters as a way to speed up collision checking. From what I understand, a Bloom filter is a space efficient data structure that helps check whether a short URL already exists before querying the database. Instead of hitting the database every single time, the Bloom filter can quickly tell if something definitely does not exist, which saves a lot of unnecessary database calls. What I am still not fully clear on is how it handles false positives, where it says something might exist but it actually does not, and how that affects the overall collision resolution process.
 
-The distributed unique ID generator is another thing that is mentioned as important for base 62 conversion to work, but the chapter just points to a different chapter for the explanation. Without knowing how unique IDs are generated across multiple servers at the same time, the base 62 approach feels like it is missing something.
+The distributed unique ID generator was also something I had to think about more carefully. For base 62 conversion to work, every URL needs a globally unique ID. But when multiple servers are running at the same time, making sure no two servers generate the same ID is not straightforward. I am still unsure how that coordination between servers works in practice.
 
-The security problem with base 62 is also noted in the chapter but no fix is given. If short URLs are just sequential IDs converted to base 62, it seems like someone could easily guess other valid short URLs.
+The security concern with base 62 is something I found interesting but unresolved. Since short URLs are based on incrementing IDs, anyone who knows one short URL could potentially guess the ones before and after it. I understand why this is a problem but I am not sure what the standard solution would look like in a real system.
 
 ### Things I Want to Learn More About
 
-- What exactly is a Bloom filter and how does it work?
+- How Bloom filters handle false positives and what impact that has on performance?
 - How unique IDs are generated reliably when multiple servers are running at the same time?
 - What happens to cached data if a URL ever needs to be changed or removed?
 - How database sharding works in practice?
@@ -155,7 +155,7 @@ After reading this chapter, I feel like I have a basic understanding of how a UR
 
 What I found most valuable was the approach of estimating scale before designing anything. It made the technical choices easier to understand because there was always a reason behind them.
 
-At the same time, a few things were left incomplete. The Bloom filter and distributed ID generator are both important to the design but are not explained in the chapter. The base 62 security concern is also raised but not resolved, which left me with more questions than answers on those parts.
+At the same time, a few things were left incomplete. The distributed unique ID generator is important for base 62 conversion to work but is not explained in this chapter. The base 62 security concern is also raised but not resolved, which left me with more questions than answers on those parts.
 
 ---
 
