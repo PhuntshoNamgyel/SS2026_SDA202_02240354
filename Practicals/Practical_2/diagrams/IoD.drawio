@@ -1,0 +1,66 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36" version="29.6.6">
+  <diagram name="Page-1" id="47d9VjpeMfcHynEZBYjU">
+    <mxGraphModel dx="1215" dy="697" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="oUpae6EMljhm_9KaE2-v-19" edge="1" parent="1" source="oUpae6EMljhm_9KaE2-v-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="oUpae6EMljhm_9KaE2-v-11">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="oUpae6EMljhm_9KaE2-v-3" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" value="Lecturer sets deadline &amp;amp; criteria&lt;div&gt;Actor: Lecturer&lt;/div&gt;" vertex="1">
+          <mxGeometry height="60" width="195" x="252.5" y="150" as="geometry" />
+        </mxCell>
+        <mxCell id="oUpae6EMljhm_9KaE2-v-16" edge="1" parent="1" source="oUpae6EMljhm_9KaE2-v-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="oUpae6EMljhm_9KaE2-v-9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="oUpae6EMljhm_9KaE2-v-6" parent="1" style="rhombus;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" value="Deadline passed?" vertex="1">
+          <mxGeometry height="80" width="92.5" x="303.75" y="350" as="geometry" />
+        </mxCell>
+        <mxCell id="oUpae6EMljhm_9KaE2-v-18" edge="1" parent="1" source="oUpae6EMljhm_9KaE2-v-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="oUpae6EMljhm_9KaE2-v-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="oUpae6EMljhm_9KaE2-v-8" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" value="Start" vertex="1">
+          <mxGeometry height="50" width="75" x="312.5" y="70" as="geometry" />
+        </mxCell>
+        <mxCell id="oUpae6EMljhm_9KaE2-v-24" edge="1" parent="1" source="oUpae6EMljhm_9KaE2-v-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="oUpae6EMljhm_9KaE2-v-10">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="oUpae6EMljhm_9KaE2-v-9" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" value="Lecturer reviews &amp;amp; grades&lt;br&gt;&lt;div&gt;Actor: Lecturer&lt;/div&gt;" vertex="1">
+          <mxGeometry height="60" width="195" x="252.5" y="470" as="geometry" />
+        </mxCell>
+        <mxCell id="oUpae6EMljhm_9KaE2-v-25" edge="1" parent="1" source="oUpae6EMljhm_9KaE2-v-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="oUpae6EMljhm_9KaE2-v-15">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="oUpae6EMljhm_9KaE2-v-10" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" value="Admin records &amp;amp; audits grade&lt;div&gt;Actor: Admin&lt;/div&gt;" vertex="1">
+          <mxGeometry height="60" width="195" x="252.5" y="570" as="geometry" />
+        </mxCell>
+        <mxCell id="oUpae6EMljhm_9KaE2-v-20" edge="1" parent="1" source="oUpae6EMljhm_9KaE2-v-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="oUpae6EMljhm_9KaE2-v-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="oUpae6EMljhm_9KaE2-v-11" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" value="Student submits assignment&lt;div&gt;Actor: Student&lt;/div&gt;" vertex="1">
+          <mxGeometry height="60" width="195" x="252.5" y="250" as="geometry" />
+        </mxCell>
+        <mxCell id="En3ZtdRnmHWkZ_2cACq8-1" edge="1" parent="1" source="oUpae6EMljhm_9KaE2-v-12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" target="oUpae6EMljhm_9KaE2-v-15">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="oUpae6EMljhm_9KaE2-v-12" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" value="Reject Submission" vertex="1">
+          <mxGeometry height="60" width="120" x="520" y="360" as="geometry" />
+        </mxCell>
+        <mxCell id="oUpae6EMljhm_9KaE2-v-15" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" value="End" vertex="1">
+          <mxGeometry height="50" width="75" x="312.5" y="670" as="geometry" />
+        </mxCell>
+        <mxCell id="oUpae6EMljhm_9KaE2-v-17" edge="1" parent="1" source="oUpae6EMljhm_9KaE2-v-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="oUpae6EMljhm_9KaE2-v-12">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="480" y="460" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="oUpae6EMljhm_9KaE2-v-21" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="No" vertex="1">
+          <mxGeometry height="30" width="27.5" x="312.5" y="430" as="geometry" />
+        </mxCell>
+        <mxCell id="oUpae6EMljhm_9KaE2-v-22" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Yes" vertex="1">
+          <mxGeometry height="30" width="30" x="430" y="360" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
