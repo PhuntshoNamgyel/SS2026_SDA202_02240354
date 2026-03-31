@@ -1,35 +1,30 @@
-# Main Concepts Applied
+# Reflection — Practical 2: UML Use Case Diagram
 
-- UML Use Case Diagrams to capture functional requirements
-- Interaction Overview Diagrams to show actor interactions and system flow
-- Swimlane diagrams to separate responsibilities across actors
-- «include» and «extend» relationships to model mandatory and optional behavior
-- System boundary to separate what is inside and outside the system
+## What I Did
 
-# New Skills or Knowledge Acquired
-
-- Drawing UML diagrams using draw.io
-- Understanding the difference between actor-to-actor flow and system-supported flow
-- Knowing when to use «include» versus «extend» in a use case diagram
-- Organizing diagrams and documentation in a GitHub repository using README.md
-
-# Reflection
+This practical was about designing UML diagrams for a university that
+wants to automate grading of programming assignments. The task required
+modelling the system from three different perspectives: how actors
+interact with each other, what the system needs to do, and how the
+system supports the actors to achieve the outcome.
 
 ## What I Learned
 
-I learned how to break down a real-world problem into three connected
-diagrams. Starting with just the actors helped me understand the business
-flow first before thinking about the system. The use case diagram then
-helped me figure out what the system actually needs to do. Combining both
-in the final diagram showed how the system fits in between the actors to
-support their goals.
+Working through the three tasks in order made the problem much clearer.
+Starting with just the actors and no system helped me understand the
+real-world flow first. From there it was easier to identify what the
+system needed to provide, and finally how everything fits together in
+the system-supported diagram. I also learned how «include» and «extend»
+work in a Use Case Diagram. «include» is for steps that always happen,
+and «extend» is for steps that are optional or depend on an external
+service like TurnItIn or LMS.
 
-## Challenges Faced and How I Overcame Them
+## Challenges
 
-The biggest challenge was understanding the difference between «include»
-and «extend». I kept confusing the two. I overcame this by remembering
-a simple rule: «include» is for steps that always happen, and «extend»
-is for steps that only happen sometimes or are optional. Another challenge
-was routing arrows cleanly in draw.io without them overlapping. I fixed
-this by moving shapes around and using right angle connectors instead of
-straight lines.
+The hardest part was getting the «include» and «extend» relationships
+right. I kept second guessing myself on which one to use. I solved this
+by going back to the requirements each time and asking whether the step
+was always required or only sometimes. Another challenge was keeping the
+naming and flow consistent across all three diagrams, which I managed
+by making sure every element in Task 3 could be traced back to either
+Task 1 or Task 2.
